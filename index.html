@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    iframe {
+      width: 100%;
+      height: 90vh;
+      padding: 2px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var iframe = document.createElement("iframe");
+    iframe.src = window.location.pathname + "/"; // <-- addition of slash allows for recursion
+    var randhex = "#" + (Math.random()).toString(16).slice(6,12);
+    iframe.setAttribute('style', "background-color:" + randhex);
+    iframe.scrolling = "no";
+    document.body.appendChild(iframe);
+  </script>
+</body>
+</html>
