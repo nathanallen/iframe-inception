@@ -26,8 +26,8 @@
     // stop after 12 recursions
     if (depth < 12) {
       iframe.src = (
-        window.location.pathname
-        + "/" // <-- addition of slash allows for recursion
+        // variation in pathname allows for recursion...
+        "/iframe-inception" // because missing trailing slash!
         + "#" + depth
       );
     } else {
