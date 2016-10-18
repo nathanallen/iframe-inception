@@ -18,6 +18,12 @@
     var randhex = "#" + (Math.random()).toString(16).slice(6,12);
     iframe.setAttribute('style', "background-color:" + randhex);
     iframe.scrolling = "no";
+    iframe.onload = function() {
+      setTimeout(function(){
+        iframe.src = "data:text/html;charset=utf-8,%3Cp%20style%3D'font-size%3A100px%3B'%3E%F0%9F%99%88%3C%2Fp%3E";
+        document.body.appendChild(iframe);
+      },2500)
+    }
     document.body.appendChild(iframe);
   </script>
 </body>
